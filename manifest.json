@@ -1,0 +1,49 @@
+{
+	"manifest_version": 2,
+	"name": "便捷翻译",
+	"version": "1.0",
+	"description": "便捷翻译-有道翻译",
+	"minimum_chrome_version": "35",
+	"author": "lyx",
+	"icons":
+	{
+    "16": "icon2.png",
+    "48": "icon2.png",
+		"128": "icon2.png"
+	},
+	// "app": {
+		// "default_icon": "icon2.png",
+		// "default_title": "便捷翻译-来自有道翻译",
+		// "default_popup": "popup.html",
+		// "launch": {
+		// 	"web_url": "https://www.yanxishe.com/"
+		// }
+	// 	"background": {
+	// 		"scripts": ["background.js"]
+	// 	}
+	// },
+	// "page_action": {
+	// 	"default_icon": "icon2.png",
+	// 	"default_title": "便捷翻译-来自有道翻译",
+	// 	"default_popup": "popup.html"
+	// },
+	"browser_action": 
+	{
+		"default_icon": "icon2.png",
+		"default_title": "便捷翻译-来自有道翻译",
+		"default_popup": "popup.html"
+	},
+	// "background": {
+	// 	"scripts": ["background.js"]
+	
+	// },
+	"content_scripts": 
+	[
+		{
+			"matches": ["<all_urls>"],
+			"js": ["jquery-1.8.3.js","content-script.js"]
+		}
+	],
+	"homepage_url": "https://www.yanxishe.com/",
+	"permissions": ["declarativeContent"]
+}
